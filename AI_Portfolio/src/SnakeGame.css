@@ -1,0 +1,408 @@
+/* =====================================================
+   SNAKE GAME
+===================================================== */
+
+.snake-game {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr;
+
+  gap: 35px;
+
+  align-items: start;
+}
+
+
+/* CANVAS */
+
+.snake-canvas-wrap {
+  position: relative;
+
+  width: 400px;
+
+  max-width: 100%;
+
+  border:
+    1px solid #343434;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  background: #080808;
+
+  box-shadow:
+    0 20px 60px
+    rgba(0, 0, 0, 0.45);
+}
+
+
+.snake-canvas {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+}
+
+
+/* OVERLAY */
+
+.snake-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 24px;
+
+  text-align: center;
+
+  background:
+    rgba(5, 5, 5, 0.82);
+
+  backdrop-filter:
+    blur(2px);
+}
+
+
+.snake-overlay-emoji {
+  font-size: 34px;
+}
+
+
+.snake-overlay p {
+  max-width: 240px;
+
+  margin: 0;
+
+  color: #cfcfcf;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+.snake-restart-button {
+  min-height: 42px;
+
+  padding:
+    0 20px;
+
+  border:
+    1px solid #ffd43b;
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 212, 59, 0.08);
+
+  color: #ffd43b;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.snake-restart-button:hover {
+  background: #ffd43b;
+
+  color: #101010;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* PANEL */
+
+.snake-panel {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+.snake-tag {
+  display: inline-block;
+
+  align-self: flex-start;
+
+  padding:
+    7px 12px;
+
+  border:
+    1px solid #454545;
+
+  border-radius: 30px;
+
+  color: #ffd43b;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.snake-blurb {
+  max-width: 420px;
+
+  margin: 0;
+
+  color: #b8b8b8;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* SCOREBOARD */
+
+.snake-scoreboard {
+  display: flex;
+
+  gap: 14px;
+}
+
+
+.snake-score-card {
+  min-width: 110px;
+
+  padding:
+    16px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  background: #101010;
+
+  border:
+    1px solid #303030;
+
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+
+.snake-score-card strong {
+  color: white;
+
+  font-size: 26px;
+
+  font-weight: 800;
+}
+
+
+.snake-score-card span {
+  color: #8b8b8b;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* CONTROLS */
+
+.snake-controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  flex-wrap: wrap;
+}
+
+
+.snake-dpad {
+  width: 140px;
+
+  height: 140px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  grid-template-rows:
+    repeat(3, 1fr);
+
+  gap: 6px;
+}
+
+
+.snake-dpad-btn {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid #343434;
+
+  border-radius: 8px;
+
+  background: #101010;
+
+  color: #dedede;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.snake-dpad-btn:hover {
+  border-color: #4b8bbe;
+
+  color: #4b8bbe;
+
+  transform:
+    translateY(-1px);
+}
+
+
+.snake-dpad-btn:active {
+  background: #4b8bbe;
+
+  color: white;
+}
+
+
+.snake-dpad-up {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+
+.snake-dpad-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+
+.snake-dpad-down {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+
+.snake-dpad-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+
+.snake-restart-secondary {
+  border-color: #555;
+
+  background: transparent;
+
+  color: #d5d5d5;
+}
+
+
+.snake-restart-secondary:hover {
+  border-color: var(--accent);
+
+  background: transparent;
+
+  color: var(--accent);
+}
+
+
+.snake-hint {
+  margin: 0;
+
+  color: #6f6f6f;
+
+  font-size: 11px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .snake-game {
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+  }
+
+
+  .snake-panel {
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+  .snake-tag {
+    align-self: center;
+  }
+
+
+  .snake-scoreboard {
+    justify-content: center;
+  }
+
+
+  .snake-controls {
+    justify-content: center;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .snake-canvas-wrap {
+    width: 100%;
+  }
+
+}
