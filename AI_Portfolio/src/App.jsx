@@ -918,15 +918,15 @@ function App() {
           <div className="projects-grid">
 
 
-            {/* STUDENT LED INITIATIVE */}
+            {/* SALES ANALYTICS */}
 
             <article className="project-card-new">
 
               <div className="project-image-new">
 
                 <img
-                  src="/photo/student-project.png"
-                  alt="Student-Led-Initiative"
+                  src="/photo/sales-dashboard.png"
+                  alt="Sales Performance Analytics Dashboard"
                   loading="lazy"
                 />
 
@@ -941,15 +941,15 @@ function App() {
 
 
                 <h3>
-                  Student-Led-Initiative
+                  Sales Performance Analytics Dashboard
                 </h3>
 
 
                 <p>
 
-                  A technology-driven web and mobile platform
-                  designed to empower students to fundraise for
-                  children suffering from blood cancer.
+                  An end-to-end data analytics project
+                  analyzing 9,994 sales records using Python,
+                  Pandas, PostgreSQL and Power BI.
 
                 </p>
 
@@ -957,27 +957,105 @@ function App() {
                 <div className="project-tags-new">
 
                   <span>
-                    Donation Tracking
+                    Python
                   </span>
 
                   <span>
-                    Transparency
+                    Pandas
                   </span>
 
                   <span>
-                    Dashboards
+                    PostgreSQL
+                  </span>
+
+                  <span>
+                    Power BI
                   </span>
 
                 </div>
 
 
                 <a
-                  href="https://studentledinitiative-frontend.vercel.app/"
+                  href="/photo/sales-dashboard.png"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-view-link"
                 >
-                  View Project →
+                  View Dashboard →
+                </a>
+
+              </div>
+
+            </article>
+
+
+
+            {/* CUSTOMER CHURN & RETENTION ANALYTICS */}
+
+            <article className="project-card-new">
+
+              <div className="project-image-new">
+
+                <img
+                  src="/photo/customer-churn.png"
+                  alt="Customer Churn & Retention Analytics"
+                  loading="lazy"
+                />
+
+              </div>
+
+
+              <div className="project-content-new">
+
+                <span className="project-number">
+                  02
+                </span>
+
+
+                <h3>
+                  Customer Churn & Retention Analytics
+                </h3>
+
+
+                <p>
+
+                  Analyzed a telecom company's customer base
+                  (7,043 accounts) to understand why customers
+                  leave and where revenue is most at risk,
+                  finding a 26.54% churn rate and $139,130.85
+                  in monthly revenue at risk.
+
+                </p>
+
+
+                <div className="project-tags-new">
+
+                  <span>
+                    Python
+                  </span>
+
+                  <span>
+                    Power BI
+                  </span>
+
+                  <span>
+                    DAX
+                  </span>
+
+                  <span>
+                    Excel
+                  </span>
+
+                </div>
+
+
+                <a
+                  href="/photo/customer-churn.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-view-link"
+                >
+                  View Dashboard →
                 </a>
 
               </div>
@@ -1004,7 +1082,7 @@ function App() {
               <div className="project-content-new">
 
                 <span className="project-number">
-                  02
+                  03
                 </span>
 
 
@@ -1059,15 +1137,15 @@ function App() {
 
 
 
-            {/* SALES ANALYTICS */}
+            {/* STUDENT LED INITIATIVE */}
 
             <article className="project-card-new">
 
               <div className="project-image-new">
 
                 <img
-                  src="/photo/sales-dashboard.png"
-                  alt="Sales Performance Analytics Dashboard"
+                  src="/photo/student-project.png"
+                  alt="Student-Led-Initiative"
                   loading="lazy"
                 />
 
@@ -1077,20 +1155,20 @@ function App() {
               <div className="project-content-new">
 
                 <span className="project-number">
-                  03
+                  04
                 </span>
 
 
                 <h3>
-                  Sales Performance Analytics Dashboard
+                  Student-Led-Initiative
                 </h3>
 
 
                 <p>
 
-                  An end-to-end data analytics project
-                  analyzing 9,994 sales records using Python,
-                  Pandas, PostgreSQL and Power BI.
+                  A technology-driven web and mobile platform
+                  designed to empower students to fundraise for
+                  children suffering from blood cancer.
 
                 </p>
 
@@ -1098,31 +1176,27 @@ function App() {
                 <div className="project-tags-new">
 
                   <span>
-                    Python
+                    Donation Tracking
                   </span>
 
                   <span>
-                    Pandas
+                    Transparency
                   </span>
 
                   <span>
-                    PostgreSQL
-                  </span>
-
-                  <span>
-                    Power BI
+                    Dashboards
                   </span>
 
                 </div>
 
 
                 <a
-                  href="/photo/sales-dashboard.png"
+                  href="https://studentledinitiative-frontend.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-view-link"
                 >
-                  View Dashboard →
+                  View Project →
                 </a>
 
               </div>
