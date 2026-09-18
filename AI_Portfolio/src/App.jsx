@@ -1020,8 +1020,9 @@ function App() {
                 <p>
 
                   Analyzed a telecom company's customer base
-                  (7,043 accounts) to understand why customers
-                  leave and where revenue is most at risk,
+                  (7,043 accounts) using Python and SQL to
+                  uncover churn drivers and revenue at risk,
+                  then visualized findings in Power BI,
                   finding a 26.54% churn rate and $139,130.85
                   in monthly revenue at risk.
 
@@ -1035,15 +1036,15 @@ function App() {
                   </span>
 
                   <span>
+                    SQL
+                  </span>
+
+                  <span>
                     Power BI
                   </span>
 
                   <span>
                     DAX
-                  </span>
-
-                  <span>
-                    Excel
                   </span>
 
                 </div>
